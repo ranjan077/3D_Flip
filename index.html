@@ -1,0 +1,22 @@
+<html>
+<head>
+	
+	<title>Flip Card Clock Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/timer.css">
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="anular-animate.js"></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+</head>
+<body ng-app="timer-app">
+	<div ngx-timer class="box"></div>
+	
+	<script type="text/ng-template" id="timerTemplate.html">
+		<div id="box">
+			<span class="top">{{current}}</span>
+			<span class="top-next">{{next}}</span>
+			<span class="bottom-next">{{next}}</span>
+			<span class="bottom">{{current}}</span>
+		</div>
+	</script>
+</body>
+</html>

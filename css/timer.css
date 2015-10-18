@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+.box {
+	box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+  	height: 300px;
+	left: 50%;
+	line-height: 300px;
+	margin: -150px 0 -100px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 200px;
+}
+
+.box span {
+	background: rgb(32, 32, 32);
+    color: rgb(248, 248, 248);
+    display: block;
+    font-size: 150px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    text-shadow: 0 1px 0 rgb(40, 40, 40), 0 2px 0 rgb(30, 30, 30), 0 3px 0 rgb(20, 20, 20), 0 4px 0 rgb(10, 10, 10), 0 5px 0 rgb(0, 0, 0), 0 0 10px rgba(0, 0, 0, 0.8);
+    font-family: "Oswald";
+    width: 100%;
+    border-radius: 10px;
+}
+
+.box span:after {
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.35);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.top {
+	background: rgb(32, 32, 32);
+	height: 50%;
+	color: rgb(248, 248, 248);
+	display: block;
+	width:100%;
+	border-bottom: 2px solid rgb(0, 0, 0);
+	-moz-transform: perspective(600px) rotateX(0deg);
+  	-ms-transform: perspective(600px) rotateX(0deg);
+  	-webkit-transform: perspective(600px) rotateX(0deg);
+  	transform: perspective(600px) rotateX(0deg);
+  	-moz-transition: -moz-transform 0.25s linear  0s;
+	-o-transition: -o-transform 0.25s linear  0s;
+	-webkit-transition: -webkit-transform 0.25s linear  0s;
+	transition: transform 0.25s linear  0s;
+	-moz-transform-origin: bottom;
+  	-webkit-transform-origin: bottom;
+  	transform-origin: bottom;
+	backface-visibility: hidden;
+	overflow: hidden;
+	z-index:5;
+}
+
+.top-next {
+	background: rgb(32, 32, 32);
+	height: 100%;
+	color: rgb(248, 248, 248);
+	display: block;
+	width:100%;
+	border-bottom: 4px solid rgb(0, 0, 0);
+	-moz-transform: perspective(600px) rotateX(90deg);
+  	-ms-transform: perspective(600px) rotateX(90deg);
+  	-webkit-transform: perspective(600px) rotateX(90deg);
+  	transform: perspective(600px) rotateX(90deg);
+	-moz-transition: -moz-transform 0.25s linear  0.25s;
+	-o-transition: -o-transform 0.0.25s linear  0.25s;
+	-webkit-transition: -webkit-transform 0.25s linear  0.25s;
+	transition: transform 0.25s linear  0.25s;
+	overflow: hidden;
+	z-index:4;
+}
+
+.top:after {
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  	background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  	background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+}
+
+.count .bottom:after {
+  border-radius: 10px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(50%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0));
+}
+
+.bottom {
+	background: rgb(32, 32, 32);
+	height: 100%;
+	color: rgb(248, 248, 248);
+	display: block;
+	width:100%;
+	-moz-transform: perspective(600px) rotateX(0deg);
+  	-ms-transform: perspective(600px) rotateX(0deg);
+  	-webkit-transform: perspective(600px) rotateX(0deg);
+  	transform: perspective(600px) rotateX(0deg);
+	backface-visibility: hidden;
+	z-index:3;
+}
+
+.bottom-next{
+	background: rgb(32, 32, 32);
+	height: 50%;
+	color: rgb(248, 248, 248);
+	display: block;
+	width:100%;
+	overflow: hidden;
+	border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+	-moz-transform: perspective(600px) rotateX(0deg);
+  	-ms-transform: perspective(600px) rotateX(0deg);
+  	-webkit-transform: perspective(600px) rotateX(0deg);
+  	transform: perspective(600px) rotateX(0deg);
+	backface-visibility: hidden;
+	z-index:4;
+}
+
+.change .top{
+	
+	transform : perspective(600px) rotateX(-90deg);
+}
+
+.change .top-next{
+	
+	transform : perspective(600px) rotateX(0deg);
+}
+
