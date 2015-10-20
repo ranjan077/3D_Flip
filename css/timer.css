@@ -3,10 +3,10 @@ body {
 	background-image: url("background.jpg");
 }
 .container{
-	width: 800px;
+	width: 1112px;
     position: absolute;
     top: 49%;
-    left: 31%;
+    left: 24%;
 }
 .divider {
 	display: inline-block;
@@ -38,7 +38,7 @@ body {
 	width: 200px;
 }
 
-.box.seconds,.box.minutes,.box.hours{
+.box.seconds,.box.minutes,.box.hours,.box.ampm{
 	float: left;
     margin-right: 7%;
 }

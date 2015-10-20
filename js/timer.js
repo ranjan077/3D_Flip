@@ -18,6 +18,24 @@ angular.module('timer-app',['ngAnimate'])
 				var elem = angular.element( document.querySelector( '#'+iAttrs.id+' .inner-box' ) );
 				return elem;
 			};
+			function findDayNight(date) {
+				var hours = date.getHours();
+				var modHours = date.getHours() % 12;
+				if(modHours == 0 && hours > 12){
+			    	mid='AM';
+			    }
+			    else if(modHours != 0 && hours < 12)
+			    {
+			    	mid='AM';
+			    }
+			    else if (modHours != 0 && hours > 12) {
+			    	mid='PM';
+			    }
+			    else if (modHours == 0 && hours <= 12) {
+			    	mid='PM';
+			    }
+			    return mid;
+			};
 			function loadTempalte() {
 				if ($scope.type == 'Seconds') {
 					$scope.current = TickTock.funcRunner('get'+$scope.type);
@@ -38,7 +56,7 @@ angular.module('timer-app',['ngAnimate'])
 					$scope.current = formatNumber($scope.current);
 					$scope.next = formatNumber($scope.next);
 					compileTemplate();
-					$scope.$on('minutes', function(event,data) {
+					$scope.$on('minutes', function() {
 					    $animate.addClass(compileTemplate(),'change');
 						$scope.current = TickTock.funcRunner('get'+$scope.type);
 						$scope.next = $scope.current+1;
@@ -52,13 +70,26 @@ angular.module('timer-app',['ngAnimate'])
 					$scope.current = formatNumber($scope.current);
 					$scope.next = formatNumber($scope.next);
 					compileTemplate();
-					$scope.$on('hours', function(event,data) {
+					$scope.$on('hours', function() {
 					    $animate.addClass(compileTemplate(),'change');
 					    $scope.current = TickTock.funcRunner('get'+$scope.type);
 						$scope.next = $scope.current+1;
 						$scope.current = formatNumber($scope.current);
 						$scope.next = formatNumber($scope.next) == '12' ? '00' : formatNumber($scope.next);
 				    });
+				}
+				else if ($scope.type == 'AMPM') {
+
+					$scope.current = findDayNight(new Date());
+					$scope.next = $scope.current == 'AM' ? 'PM' : 'AM';
+					compileTemplate();
+					$scope.$on('AM-PM', function(event, data) {
+						if ($scope.current != findDayNight(data)) {
+							$animate.addClass(compileTemplate(),'change');
+							$scope.current = findDayNight(data);
+							$scope.next = $scope.current == 'AM' ? 'PM' : 'AM';
+						}
+					});
 				}
 				
 			};
@@ -96,6 +127,7 @@ angular.module('timer-app',['ngAnimate'])
 			seconds = 0;
 			service.tickMinutes();
 			$rootScope.$broadcast('minutes');
+			$rootScope.$broadcast('AM-PM', date.getHours());
 		}
 		else {
 			seconds += 1;
