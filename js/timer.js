@@ -67,9 +67,10 @@ angular.module('timer-app',['ngAnimate'])
 	};
 }])
 .factory('TickTock', ['$rootScope', function($rootScope){
-	var seconds = 0;
-	var minutes = 0;
-	var hours = 0;
+	var date = new Date();
+	var seconds = date.getSeconds();
+	var minutes = date.getMinutes();
+	var hours = date.getHours() % 12;
 	var service = {};
 	var returnObj = {
 		funcRunner :  function (functionName) {
