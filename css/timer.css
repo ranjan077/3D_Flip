@@ -2,6 +2,12 @@
 body {
 	background-image: url("background.jpg");
 }
+.container{
+	width: 800px;
+    position: absolute;
+    top: 49%;
+    left: 31%;
+}
 .divider {
 	display: inline-block;
 	position: absolute;
@@ -20,26 +26,23 @@ body {
 }
 
 .box {
+	position: relative;
+	float: left;
+    margin-right: 7%;
 	box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
   	height: 300px;
-	line-height: 300px;
+	line-height: 19em;
 	margin: -150px 0 -100px;
-	position: absolute;
 	text-align: center;
 	top: 50%;
 	width: 200px;
 }
-.box.seconds {
-	left: 57%;
+
+.box.seconds,.box.minutes,.box.hours{
+	float: left;
+    margin-right: 7%;
 }
 
-.box.minutes {
-	left: 44%;
-}
-
-.box.hours {
-	left: 31%;
-}
 .box span {
 	background: rgb(32, 32, 32);
     color: rgb(248, 248, 248);
@@ -94,7 +97,7 @@ body {
 	color: rgb(248, 248, 248);
 	display: block;
 	width:100%;
-	border-bottom: 4px solid rgb(0, 0, 0);
+	/*border-bottom: 4px solid rgb(0, 0, 0);*/
 	-moz-transform: perspective(600px) rotateX(90deg);
   	-ms-transform: perspective(600px) rotateX(90deg);
   	-webkit-transform: perspective(600px) rotateX(90deg);
