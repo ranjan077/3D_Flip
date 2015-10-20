@@ -30,15 +30,15 @@ body {
 	width: 200px;
 }
 .box.seconds {
-	left: 51%;
+	left: 57%;
 }
 
 .box.minutes {
-	left: 38%;
+	left: 44%;
 }
 
 .box.hours {
-	left: 25%;
+	left: 31%;
 }
 .box span {
 	background: rgb(32, 32, 32);
