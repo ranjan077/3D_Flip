@@ -8,10 +8,11 @@
 	<script type="text/javascript" src="js/timer.js"></script>
 </head>
 <body ng-app="timer-app">
-	<div ngx-timer class="box"></div>
-	
+	<div ngx-timer type="Seconds" class="box seconds" id="seconds"></div>
+	<div ngx-timer type="Minutes" class="box minutes" id="minutes"></div>
+	<div ngx-timer type="Hours" class="box hours" id="hours"></div>
 	<script type="text/ng-template" id="timerTemplate.html">
-		<div id="box">
+		<div class="inner-box">
 			<span class="top">{{current}}</span>
 			<span class="top-next">{{next}}</span>
 			<span class="bottom-next">{{next}}</span>

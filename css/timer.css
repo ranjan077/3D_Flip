@@ -1,8 +1,27 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
+body {
+	background-image: url("background.jpg");
+}
+.divider {
+	display: inline-block;
+	position: absolute;
+	width: 20px;
+	height: 100px; 
+}
+.dot {
+	display: block;
+	background: rgb(32, 32, 32);
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	left: 5px; 
+}
+
 .box {
 	box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
   	height: 300px;
-	left: 50%;
 	line-height: 300px;
 	margin: -150px 0 -100px;
 	position: absolute;
@@ -10,7 +29,17 @@
 	top: 50%;
 	width: 200px;
 }
+.box.seconds {
+	left: 51%;
+}
 
+.box.minutes {
+	left: 38%;
+}
+
+.box.hours {
+	left: 25%;
+}
 .box span {
 	background: rgb(32, 32, 32);
     color: rgb(248, 248, 248);
